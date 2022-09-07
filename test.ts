@@ -1,5 +1,4 @@
 import * as re from './src/index';
-import { Rex } from './src/index';
 
 /*
 Password with:
@@ -25,10 +24,3 @@ const s = re.intersect(
 	re.atLeast(1, re.Number),
 	re.atLeast(1, re.Special, re.Any)
 );
-
-const regexPattern = /cat\b/;
-const regexPattern2 = new Rex('cat').endOfWord().toRegExp();
-console.log(regexPattern2.exec('The mouse and the cat')); // Output: true
-console.log(regexPattern2.exec('cat and mouse')); // Output: false
-console.log(regexPattern2.exec('cat')); // Output: false
-console.log(regexPattern2.exec('cat2 asd')); // Output: false
